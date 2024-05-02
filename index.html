@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBAC Pet Blog</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+
+        .nav-link {
+            text-align: center;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff;
+            background-color: rgb(221, 28, 179); 
+        }
+
+        #cabecalho {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgb(207, 123, 189);
+        }
+
+        #cabecalho h1 {
+            color: #fff;
+            font-style: italic;
+        }
+
+        .carousel-item img {
+            max-width: 50vw;
+            max-height: 40vw;
+            margin: auto;
+        }
+
+        #button-esq,
+        #button-dir {
+            background-color: black;
+        }
+
+        .card-spacing {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        .btn-success {
+            background-color: rgb(207, 123, 189);
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: rgb(221, 28, 179);
+        }
+        #post-novo h3 {
+            padding-top: 74px;
+            margin-top: 24px;
+            color: rgb(207, 123, 189);
+        }
+
+        #post-anterior h3 {
+            padding-top: 0;
+            margin-top: 24px;
+            color: rgb(207, 123, 189);
+        }
+
+        #galeria h3 {
+            margin-bottom: 24px;
+            color: rgb(207, 123, 189);
+        }
+
+        #galeria {
+            padding-bottom: 48px;
+        }
+
+        footer {
+            padding: 16px 0;
+            background-color: rgb(207, 123, 189);
+        }
+
+        .container-flex {
+            display: flex;
+        }
+
+        #roda-pe {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer li {
+            list-style: none;
+            margin-left: 16px;
+        }
+
+        footer li img {
+            height: 32px;
+        }
+
+        @media screen and (max-width: 640px) {
+            #ul-footer {
+        justify-content: center;
+        }
+
+        #roda-pe p {
+            text-align: left;
+        }
+
+        #ul-footer li img {
+            margin-top: 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="cabecalho">
+            <div class="navbar navbar-expand-lg">
+                <h1>EBAC Pet Blog</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#title-seccao">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#title-post-anterior">Posts</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho" class="container">
+        <section id="post-novo">
+            <h3 id="title-seccao">Últimas Postagens</h3>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="col card-spacing">
+                        <div class="card card-post">
+                            <header class="card-header">
+                                Pet's aquáticos
+                            </header>
+                            <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                            <div class="card-body">
+                                <h4 class="card-title">Fofinhos e amigáveis</h4>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                                </p>
+                                <a href="#" class="btn btn-success">Leia mais</a>
+                            </div>
+                            <footer class="card-footer">
+                                Postado em <time>01/05/2024 às 23:00:00</time>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="col card-spacing">
+                        <div class="card card-post">
+                            <header class="card-header">
+                                Pet's aquáticos
+                            </header>
+                            <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                            <div class="card-body">
+                                <h4 class="card-title">Fofinhos e amigáveis</h4>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                                </p>
+                                <a href="#" class="btn btn-success">Leia mais</a>
+                            </div>
+                            <footer class="card-footer">
+                                Postado em <time>01/05/2024 às 23:00:00</time>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="col card-spacing">
+                        <div class="card card-post">
+                            <header class="card-header">
+                                Pet's aquáticos
+                            </header>
+                            <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                            <div class="card-body">
+                                <h4 class="card-title">Fofinhos e amigáveis</h4>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                                </p>
+                                <a href="#" class="btn btn-success">Leia mais</a>
+                            </div>
+                            <footer class="card-footer">
+                                Postado em <time>01/05/2024 às 23:00:00</time>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+        <section id="post-anterior">
+            <h3 id="title-post-anterior">Postagens anterior</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col card-spacing">
+                    <div class="card card-post">
+                        <header class="card-header">
+                            Pet's aquáticos
+                        </header>
+                        <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                        <div class="card-body">
+                            <h4 class="card-title">Fofinhos e amigáveis</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                            </p>
+                            <a href="#" class="btn btn-success">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>01/05/2024 às 23:00:00</time>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col card-spacing">
+                    <div class="card card-post">
+                        <header class="card-header">
+                            Pet's aquáticos
+                        </header>
+                        <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                        <div class="card-body">
+                            <h4 class="card-title">Fofinhos e amigáveis</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                            </p>
+                            <a href="#" class="btn btn-success">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>01/05/2024 às 23:00:00</time>
+                        </footer>
+                    </div>
+                </div>
+                <div class="col card-spacing">
+                    <div class="card card-post">
+                        <header class="card-header">
+                            Pet's aquáticos
+                        </header>
+                        <img src="./Imagens/peixes.webp" alt="Cardume de peixes">
+                        <div class="card-body">
+                            <h4 class="card-title">Fofinhos e amigáveis</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam architecto facilis nobis aperiam.
+                            </p>
+                            <a href="#" class="btn btn-success">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>01/05/2024 às 23:00:00</time>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section id="galeria">
+            <h3>Galeria</h3>
+            <div id="carousel-modelo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div data-bs-interval="3000" class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./Imagens/lagarto rosa.webp" alt="Imagen de um agarto rosa">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./Imagens/frasco de perfume.webp" alt="Frasco de perfume">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="./Imagens/coelho.webp" alt="Imagen de um coelho">
+                    </div>
+                </div>
+                <button id="button-esq" data-bs-target="#carousel-modelo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button id="button-dir" data-bs-target="#carousel-modelo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="carousel-modelo" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="carousel-modelo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="carousel-modelo" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+</body>
+<footer>
+    <div class="container container-flex" id="roda-pe">
+        <p>
+            2024 &copy; EBAC Pet Blog - Todos os direitos reservados
+        </p>
+        <ul id="ul-footer" class="container-flex">
+            <li>
+                <a href="#">
+                    <img src="./icones/facebook.png" alt="Logo do Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./icones/instagram.png" alt="Logo Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./icones/youtube.png" alt="Logo do YouTube">
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="./lib/bootstrap.bundle.min.js"></script>
+</html>
